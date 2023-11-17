@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="container">
+    <form #studentlogin="ngForm"(ngSubmit)="hello(studentlogin)">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title text-center bg-black">Student Login Form</h1>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="Un">User Name</label>
+                    <input type="text" name="uname" ngModel id="Un" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="Fn">First Name</label>
+                    <input type="text" name="fname" ngModel id="Fn" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="Ln">Last Name</label>
+                    <input type="text" name="lname" ngModel id="Ln" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email Id</label>
+                    <input type="email" name="email" ngModel id="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" ngModel id="pass" class="form-control">
+                </div>
+                <div class="panel-footer text-center">
+                   <!-- <input type="submit" class="btn btn-primary"> -->
+                   <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+   </form>
+   {{studentlogin.value | json}}
+</div>
